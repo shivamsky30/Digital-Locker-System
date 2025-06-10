@@ -3,28 +3,28 @@ digital-locker/ <br>
 ├── src/     <br>
 │   ├── main/  <br>
 │   │   ├── java/  <br>
-│   │   │   └── com/
-│   │   │       └── digitallocker/
-│   │   │           ├── model/
-│   │   │           │   ├── User.java
-│   │   │           │   └── FileMetadata.java
-│   │   │           ├── dao/
-│   │   │           │   ├── UserDao.java
-│   │   │           │   └── FileDao.java
-│   │   │           ├── service/
-│   │   │           │   └── LockerService.java
-│   │   │           ├── util/
-│   │   │           │   └── PasswordHasher.java
-│   │   │           └── DigitalLockerApp.java (Main application class)
-│   └── test/
-│       └── java/
-│           └── com/
-│               └── digitallocker/
-│                   └── ... (Unit tests - optional for initial phase)
+│   │   │   └── com/ <br>
+│   │   │       └── digitallocker/ <br>
+│   │   │           ├── model/ <br>
+│   │   │           │   ├── User.java <br>
+│   │   │           │   └── FileMetadata.java <br>
+│   │   │           ├── dao/ <br>
+│   │   │           │   ├── UserDao.java <br>
+│   │   │           │   └── FileDao.java <br>
+│   │   │           ├── service/ <br>
+│   │   │           │   └── LockerService.java <br>
+│   │   │           ├── util/ <br>
+│   │   │           │   └── PasswordHasher.java <br>
+│   │   │           └── DigitalLockerApp.java (Main application class) <br>
+│   └── test/ <br>
+│       └── java/ <br>
+│           └── com/ <br>
+│               └── digitallocker/ <br>
+│                   └── ... (Unit tests - optional for initial phase) <br>
 ├── data/
-│   ├── users.txt         (Stores user credentials)
-│   ├── [username]_files.txt (Stores metadata for each user's files)
-│   └── [username]/       (Directory for actual user files)
-├── README.md
-├── .gitignore
-└── pom.xml (if using Maven) / build.gradle (if using Gradle)
+│   ├── users.txt         (Stores user credentials) <br>
+│   ├── [username]_files.txt (Stores metadata for each user's files) <br>
+│   └── [username]/       (Directory for actual user files) <br>
+├── README.md <br>
+├── .gitignore <br>
+└── pom.xml (if using Maven) / build.gradle (if using Gradle)    <br>

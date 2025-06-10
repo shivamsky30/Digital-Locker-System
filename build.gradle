@@ -1,1 +1,60 @@
+plugins {
+    // Apply the Java plugin to add support for Java.
+    id 'java'
+    // Apply the application plugin to add support for building a runnable JAR.
+    id 'application'
+}
 
+// Define the group for your project (e.g., your company or personal domain).
+group = 'com.digitallocker'
+// Define the version of your project.
+version = '1.0-SNAPSHOT'
+
+// Define the source and target compatibility for Java.
+// This ensures your code is compiled for a specific Java version.
+// Using Java 17 as it's a current LTS (Long-Term Support) version.
+java {
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
+}
+
+repositories {
+    // Use Maven Central for dependencies. This is the most common repository.
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    // 'testImplementation' means this dependency is only available for tests.
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // You might add other dependencies here later if your project grows.
+    // For a simple console app using only file handling, you might not need external libs initially.
+}
+
+// Configure the 'test' task to use JUnit Platform.
+test {
+    useJUnitPlatform()
+}
+
+// Configure the 'application' plugin for running your main class.
+application {
+    // Specify the main class of your application.
+    // This is the class that contains the `public static void main(String[] args)` method.
+    mainClass = 'com.digitallocker.DigitalLockerApp'
+}
+
+// Task to create a fat/uber JAR, including all dependencies.
+// This makes it easy to distribute and run your application with a single JAR file.
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.digitallocker.DigitalLockerApp'
+    }
+    // To include all dependencies in the JAR, comment out this 'from' block if you prefer
+    // a lean JAR and manage dependencies separately (e.g., in a lib folder).
+    // For simple console apps, a fat JAR is often convenient.
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

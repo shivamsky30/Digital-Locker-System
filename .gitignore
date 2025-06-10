@@ -1,1 +1,53 @@
+# Compiled class files
+*.class
 
+# Jar files
+*.jar
+*.war
+*.ear
+
+# Log files
+*.log
+logs/
+target/
+
+# IDE-specific files
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+*.launch
+.metadata
+
+# VS Code
+.vscode/
+
+# Maven-specific files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Gradle-specific files
+.gradle/
+build/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Project-specific data directory
+# This directory contains user data (users.txt, user-specific file metadata, and actual files).
+# It should NOT be committed to version control as it contains sensitive and dynamic data.
+data/

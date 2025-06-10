@@ -14,32 +14,27 @@ Data Persistence: All user credentials and file metadata are saved to text files
 Project Structure
 The project follows a layered architecture to ensure modularity and maintainability:
 
-digital-locker/ <br>
-├── src/     <br>
-│   └── main/  <br>
-│       └── java/  <br>
-│          └── com/ <br>
-│               └── digitallocker/ <br>
-│                   ├── model/ <br>
-│                   │   ├── User.java <br>
-│                   │   └── FileMetadata.java <br>
-│                   ├── dao/ <br>
-│                   │   ├── UserDao.java <br>
-│                   │   └── FileDao.java <br>
-│                   ├── service/ <br>
-│                   │   └── LockerService.java <br>
-│                   ├── util/ <br>
-│                   │   └── PasswordHasher.java <br>
-│                   └── DigitalLockerApp.java (Main application class) <br>
-├── data/  <br>
-│   ├── users.txt         (Stores user credentials) <br>
-│   ├── [username]_files.txt (Stores metadata for each user's files) <br>
-│   └── [username]/       (Directory for actual user files) <br>
-├── README.md <br>
-├── .gitignore <br>
-└── pom.xml (if using Maven) / build.gradle (if using Gradle)    <br>
+digital-locker/                                                                                    <br>     
+├── src/                                                                                           <br>
+│   ├── main/                                                                                      <br>    
+│   │   ├── java/                                                                                  <br>
+│   │   │   └── com/                                                                               <br>
+│   │   │       └── digitallocker/                                                                 <br>
+│   │   │           ├── model/          (Data models: User, FileMetadata)                          <br>
+│   │   │           ├── dao/            (Data Access Objects: UserDao, FileDao for file I/O)       <br>
+│   │   │           ├── service/        (Business logic: LockerService)                            <br>
+│   │   │           ├── util/           (Utility classes: PasswordHasher)                          <br>
+│   │   │           └── DigitalLockerApp.java (Main application entry point)                       <br>
+├── data/                       (Automatically created directory for application data)             <br>
+│   ├── users.txt               (Stores user credentials - username|hashedPassword)                <br>
+│   ├── [username]_files.txt    (Stores metadata for each user's files)                            <br>
+│   └── [username]/             (Subdirectories for actual user files)                             <br>
+├── README.md                   (This file)                                                        <br>
+├── .gitignore                  (Specifies files/directories to ignore in Git)                     <br>
+├── build.gradle                (Gradle build configuration)                                       <br>
+└── pom.xml                     (Maven build configuration - if using Maven)                       <br>
 
-
+ 
 Getting Started
 Follow these steps to set up and run the Digital Locker System on your local machine.
 

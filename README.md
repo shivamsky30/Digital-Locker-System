@@ -1,8 +1,8 @@
 # Digital-Locker-System
-digital-locker/
-├── src/
-│   ├── main/
-│   │   ├── java/
+digital-locker/ <br>
+├── src/     <br>
+│   ├── main/  <br>
+│   │   ├── java/  <br>
 │   │   │   └── com/
 │   │   │       └── digitallocker/
 │   │   │           ├── model/

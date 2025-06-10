@@ -1,26 +1,22 @@
 # Digital-Locker-System
 digital-locker/ <br>
 ├── src/     <br>
-│   ├── main/  <br>
-│   │   ├── java/  <br>
-│   │   │   └── com/ <br>
-│   │   │       └── digitallocker/ <br>
-│   │   │           ├── model/ <br>
-│   │   │           │   ├── User.java <br>
-│   │   │           │   └── FileMetadata.java <br>
-│   │   │           ├── dao/ <br>
-│   │   │           │   ├── UserDao.java <br>
-│   │   │           │   └── FileDao.java <br>
-│   │   │           ├── service/ <br>
-│   │   │           │   └── LockerService.java <br>
-│   │   │           ├── util/ <br>
-│   │   │           │   └── PasswordHasher.java <br>
-│   │   │           └── DigitalLockerApp.java (Main application class) <br>
-│   └── test/ <br>
-│       └── java/ <br>
-│           └── com/ <br>
+│   └── main/  <br>
+│       └── java/  <br>
+│          └── com/ <br>
 │               └── digitallocker/ <br>
-│                   └── ... (Unit tests - optional for initial phase) <br>
+│                   ├── model/ <br>
+│                   │   ├── User.java <br>
+│                   │   └── FileMetadata.java <br>
+│                   ├── dao/ <br>
+│                   │   ├── UserDao.java <br>
+│                   │   └── FileDao.java <br>
+│                   ├── service/ <br>
+│                   │   └── LockerService.java <br>
+│                   ├── util/ <br>
+│                   │   └── PasswordHasher.java <br>
+│                   └── DigitalLockerApp.java (Main application class) <br>
+│   
 ├── data/
 │   ├── users.txt         (Stores user credentials) <br>
 │   ├── [username]_files.txt (Stores metadata for each user's files) <br>
